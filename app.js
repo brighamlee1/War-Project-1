@@ -36,8 +36,15 @@ function shuffle() {
     }
 }
 
-// 
+// splitting the cards in half and then assigning them to each player
 function splitShuffle() {
-    const deckSplit = Math.ceil(deck.length / 2)
-    const player1Deck = 
+    const deckSplit = Math.ceil(deck.length / 2);
+    player1Deck = deck.slice(0, deckSplit);
+    player2Deck = deck.slice(deckSplit, deck.length);
+}
+
+startGame();
+function startGame() {
+    shuffle();
+    splitShuffle();
 }
