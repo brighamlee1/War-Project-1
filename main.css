@@ -1,11 +1,12 @@
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 200px 200px;
-    grid-template-rows: 250px 200px 100px 250px;
-    background-color: green;
+    grid-template-columns: 150px 150px;
+    grid-template-rows: 250px 200px 50px 250px;
+    background-color: rgb(63, 129, 184);
     justify-content: center;
     padding-top: 15px;
+    gap: 20px;
 }
 
 .deck {
@@ -13,14 +14,25 @@ body {
     width: 100%;
     border: 2px solid black;
     border-radius: 5%;
-    margin-right: 15px;
+    background-color: red;
 }
 
-.cardsWon {
+.card {
     height: 100%;
     width: 100%;
     border: 2px solid black;
     border-radius: 5%;
-    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 80px;
+    background-color: white;
 }
 
+.red {
+    color: red;
+}
+
+.black {
+    color: black;
+}

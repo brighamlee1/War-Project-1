@@ -43,6 +43,18 @@ function splitShuffle() {
     player2Deck = deck.slice(deckSplit, deck.length);
 }
 
+function flipCard() {
+    const cardHolder = document.createElement('div');
+    cardHolder.innerText = `${card.rank} ${card.suit}`;
+    cardHolder.classList.add("card");
+    if (card.suit === '♣' || card.suit === '♠') {
+        cardHolder.classList.add('black');
+    } else {
+        cardHolder.classList.add('red');
+    }
+    return cardHolder;
+}
+
 startGame();
 function startGame() {
     shuffle();
