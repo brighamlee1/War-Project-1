@@ -9,6 +9,6 @@
 - the game ends when one player is completely out of cards
 
 ### Wireframe 
-[WarWireframe](https://user-images.githubusercontent.com/91819733/162468920-b92fc1a1-126a-40b3-bc8b-f63f3e7e4822.png)
+![WarWireframe](https://user-images.githubusercontent.com/91819733/162468920-b92fc1a1-126a-40b3-bc8b-f63f3e7e4822.png)
 
 # User Stories
