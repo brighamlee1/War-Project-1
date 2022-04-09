@@ -1,42 +1,48 @@
 // declaring DOM variables
 let player1Deck = document.querySelector('.player1Deck');
 let player1CardsWon = document.querySelector('.player1CardsWon');
-let player1Cards = document.querySelector('.player1DCards');
+let player1Cards = document.querySelector('.player1Cards');
 let player2Deck = document.querySelector('.player2Deck');
 let player2CardsWon = document.querySelector('.player2CardsWon');
 let player2Cards = document.querySelector('.player2Cards');
-let cardHolder = document.querySelectorAll('.cardHolder')
+let cardHolder1 = document.querySelector('.cardHolder1')
+let cardHolder2 = document.querySelector('.cardHolder2')
+let startTheGame = document.querySelector('.start-game')
 
 // creating suits and ranks
-const suits = ['♣', '♦', '♥', '♠'];
-const ranks = ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'];
-
-class deck {
-    constructor(cards = newDeck()) {
-        this.cards = cards;
-    }
+const cardAttributes = {
+    suits: ['♣', '♦', '♥', '♠'],
+    ranks: ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'],
 }
 
-class card {
-    constructor(suit, rank) {
-        this.suit = suit;
-        this.rank = rank;
-    }
+const deck = [];
+
+startTheGame.addEventListener('click', () => {
+    startGame();
+})
+
+function startGame() {
+    newDeck();
+    shuffle();
+    deckSplit();
 }
 
-// creating new deck function so we can eventually just create new deck
+// creating new deck function 
 function newDeck() {
-    for (let i = 0; i < ranks.length; i++) {
-        for (let j = 0; j < suits.length; i++) {
-            ranks[j] = card.rank;
-            suits[i] = card.suit;
-        }
-    }
+    cardAttributes.suits.forEach((suit) => {
+        cardAttributes.ranks.forEach((rank, i) => {
+            const card = {
+                suit: suit,
+                rank: rank,
+                cardRank: i + 2,
+            }
+            deck.push(card);
+        })
+    })
 }
 
-// shuffling the deck we made above^^
 function shuffle() {
-    for (let i = deck.cards.length - 1; i > 0; i--) {
+    for (let i = deck.length - 1; i > 0; i--) {
         let j = Math.floor(Math.random() * i);
         let random = deck[i];
         deck[i] = deck[j];
@@ -44,24 +50,37 @@ function shuffle() {
     }
 }
 
-startGame();
-function startGame() {
-    const newDeck = new deck()
-    newDeck.shuffle();
-    const deckSplit = Math.ceil(deck.cards.length / 2);
-    player1Deck = new deck(deck.slice(0, deckSplit));
-    player2Deck = new deck(deck.slice(deckSplit, deck.cards.length));
+function deckSplit() {
+    const deckSplit = Math.ceil(deck.length / 2);
+    player1Deck = deck.slice(0, deckSplit);
+    player2Deck = deck.slice(deckSplit, deck.length);
 }
 
-function flipCard() {
-    cardHolder.innerText = `${deck.cards.rank} ${deck.cards.suit}`;
-    cardHolder.classList.add("card");
-    if (deck.suit === '♣' || deck.suit === '♠') {
-        cardHolder.classList.add('black');
-    } else {
-        cardHolder.classList.add('red');
+function player1Flip() {
+    for (let i = 0; i < player1Deck.length; i++) {
+        if (player1Deck[i].suit == '♣' || player1Deck[i].suit == '♠') {
+            cardHolder1.classList.add('black');
+        } else {
+            cardHolder1.classList.add('red');
+        }
+        cardHolder1.classList.add('card');
+        cardHolder1.innerText = `${player1Deck[i].rank} ${player1Deck[i].suit}`;
     }
-    return cardHolder;
 }
 
-player1Deck.appendChild(player1Deck[0].flipCard());
+player1Deck.addEventListener('click', player1Flip);
+
+function player2Flip() {
+    for (let i = 0; i < player2Deck.length; i++) {
+        if (player2Deck[i].suit === '♣' || player2Deck[i].suit === '♠') {
+            cardHolder2.classList.add('black');
+        } else if (player2Deck[i].suit == '♥' || player2Deck[i].suit == '♦') {
+            cardHolder2.classList.add('red');
+        }
+        cardHolder2.innerText = `${player2Deck[i].rank} ${player2Deck[i].suit}`;
+        cardHolder2.classList.add('card');
+    }
+}
+
+player2Deck.addEventListener('click', player2Flip);
+
