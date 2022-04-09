@@ -15,6 +15,7 @@ const cardAttributes = {
     ranks: ['2', '3', '4', '5', '6', '7', '8', '9', '10', 'J', 'Q', 'K', 'A'],
 }
 
+let war = false;
 const deck = [];
 
 startTheGame.addEventListener('click', () => {
@@ -56,8 +57,10 @@ function deckSplit() {
     player2Deck = deck.slice(deckSplit, deck.length);
 }
 
+let i = 0;
+player1CardsWon = [];
 function player1Flip() {
-    for (let i = 0; i < player1Deck.length; i++) {
+    if (i < player1Deck.length && player2Deck.length) {
         if (player1Deck[i].suit == '♣' || player1Deck[i].suit == '♠') {
             cardHolder1.classList.add('black');
         } else {
@@ -65,22 +68,35 @@ function player1Flip() {
         }
         cardHolder1.classList.add('card');
         cardHolder1.innerText = `${player1Deck[i].rank} ${player1Deck[i].suit}`;
+
+        if (player2Deck[i].suit == '♣' || player2Deck[i].suit == '♠') {
+            cardHolder2.classList.add('black');
+        } else {
+            cardHolder2.classList.add('red');
+        }
+        cardHolder2.innerText = `${player2Deck[i].rank} ${player2Deck[i].suit}`;
+        cardHolder2.classList.add('card');
+        i++;
+        compareCards();
     }
 }
 
 player1Deck.addEventListener('click', player1Flip);
 
-function player2Flip() {
-    for (let i = 0; i < player2Deck.length; i++) {
-        if (player2Deck[i].suit === '♣' || player2Deck[i].suit === '♠') {
-            cardHolder2.classList.add('black');
-        } else if (player2Deck[i].suit == '♥' || player2Deck[i].suit == '♦') {
-            cardHolder2.classList.add('red');
-        }
-        cardHolder2.innerText = `${player2Deck[i].rank} ${player2Deck[i].suit}`;
-        cardHolder2.classList.add('card');
+// player2Deck.addEventListener('click', player2Flip);
+
+let cardArray = [];
+function compareCards() {
+    if (player1Deck[0].cardRank > player2Deck[0].cardRank) {
+        player1Deck.shift();
+        player2Deck.shift();
+        player1Deck.push(player1Deck[0]);
+        player1Deck.push(player2Deck[0]);
+    }
+    else if (player2Deck[0].cardRank > player1Deck[0].cardRank) {
+        player1Deck.shift();
+        player2Deck.shift();
+        player2Deck.push(player1Deck[0]);
+        player2Deck.push(player2Deck[0]);
     }
 }
-
-player2Deck.addEventListener('click', player2Flip);
-

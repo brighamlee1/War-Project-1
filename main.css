@@ -36,3 +36,7 @@ body {
 .black {
     color: black;
 }
+
+.hidden {
+    display: none;
+}
