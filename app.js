@@ -23,15 +23,14 @@ const cardAttributes = {
 const deck = [];
 
 // start game event listener
-startTheGame.addEventListener('click', () => {
-    startGame();
-}, { once: true });
+startTheGame.addEventListener('click', startGame);
 
 // starting the game function
 function startGame() {
     newDeck();
     shuffle();
     deckSplit();
+    startTheGame.removeEventListener('click', startGame);
     return;
 }
 
@@ -62,7 +61,7 @@ function shuffle() {
 // split the deck between player1 and player 2
 function deckSplit() {
     const deckSplit = Math.ceil(deck.length / 2);
-    player1Deck = deck.slice(24, deckSplit);
+    player1Deck = deck.slice(25, deckSplit);
     player2Deck = deck.slice(deckSplit, deck.length);
     winner();
 }
@@ -139,6 +138,9 @@ function compareCards() {
                 player1Deck.push(player2Deck[7]);
                 player1Deck.splice(0, 8);
                 player2Deck.splice(0, 8);
+                cards1.innerText = `${player1Deck[7].rank} ${player1Deck[7].suit}`;
+                cards2.innerText = `${player2Deck[7].rank} ${player2Deck[7].suit}`;
+                winnerText.innerText = 'Player 1 Won the war!';
             }
             else if (player2Deck[7].cardRank > player1Deck[7].cardRank) {
                 player2Deck.push(player1Deck[0]);
@@ -159,6 +161,9 @@ function compareCards() {
                 player2Deck.push(player2Deck[7]);
                 player1Deck.splice(0, 8);
                 player2Deck.splice(0, 8);
+                cards1.innerText = `${player1Deck[7].rank} ${player1Deck[7].suit}`;
+                cards2.innerText = `${player2Deck[7].rank} ${player2Deck[7].suit}`;
+                winnerText.innerText = 'Player 2 Won the war!';
             }
         }
         else if (player1Deck[3].cardRank > player2Deck[3].cardRank) {
@@ -172,6 +177,9 @@ function compareCards() {
             player1Deck.push(player2Deck[3]);
             player1Deck.splice(0, 4);
             player2Deck.splice(0, 4);
+            cards1.innerText = `${player1Deck[3].rank} ${player1Deck[3].suit}`;
+            cards2.innerText = `${player2Deck[3].rank} ${player2Deck[3].suit}`;
+            winnerText.innerText = 'Player 1 Won the war!';
         }
         else if (player2Deck[3].cardRank > player1Deck[3].cardRank) {
             player2Deck.push(player1Deck[0]);
@@ -184,6 +192,9 @@ function compareCards() {
             player2Deck.push(player2Deck[3]);
             player1Deck.splice(0, 4);
             player2Deck.splice(0, 4);
+            cards1.innerText = `${player1Deck[3].rank} ${player1Deck[3].suit}`;
+            cards2.innerText = `${player2Deck[3].rank} ${player2Deck[3].suit}`;
+            winnerText.innerText = 'Player 2 Won the war!';
         }
     }
     else if (player1Deck[0].cardRank > player2Deck[0].cardRank) {
@@ -208,11 +219,11 @@ function compareCards() {
 // checking for a winner
 function winner() {
     if (player1Deck.length < 1) {
-        winnerText.innerText = 'Player 2 Wins the Game!! Game over!';
+        winnerText.innerText = 'Player 2 Wins the Game!!';
         player1CardsWon.innerText = `Cards: 0`;
         endGame();
     } else if (player2Deck.length < 1) {
-        winnerText.innerText = 'Player 1 Wins the Game!! Game over!';
+        winnerText.innerText = 'Player 1 Wins the Game!!';
         player2CardsWon.innerText = `Cards: 0`;
         endGame();
     }
@@ -220,12 +231,12 @@ function winner() {
 
 // checking for a winner before a war happens
 function warWinner() {
-    if (player1Deck.length < 4) {
-        winnerText.innerText = 'Player 2 Wins the Game!! Game over!'
+    if (player1Deck.length < 5) {
+        winnerText.innerText = 'Player 2 Wins the Game!!'
         player1CardsWon.innerText = `Cards: 0`;
         endGame();
-    } else if (player2Deck.length < 4) {
-        winnerText.innerText = 'Player 1 Wins the Game!! Game over!'
+    } else if (player2Deck.length < 5) {
+        winnerText.innerText = 'Player 1 Wins the Game!!'
         player2CardsWon.innerText = `Cards: 0`;
         endGame();
     }
@@ -240,5 +251,6 @@ function endGame() {
     cards1.classList.remove('black');
     cards2.innerHTML = ``;
     cards2.classList.remove('cardHolder2');
+    draw.removeEventListener('click', playerFlip);
     alert("Game Over! Refresh the page and then press start to play again!");
 }
