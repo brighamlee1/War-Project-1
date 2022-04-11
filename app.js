@@ -239,7 +239,7 @@ function endGame() {
     cards1.classList.add('white');
     cards1.classList.remove('red');
     cards1.classList.remove('black');
-    cards2.innerHTML = "Game Over!!";
+    cards2.innerHTML = "Game Over";
     cards2.classList.add('blue');
     cards2.classList.remove('red');
     cards2.classList.remove('black');
