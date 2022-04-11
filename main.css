@@ -4,17 +4,31 @@ body {
     height: 100vh;
     justify-content: center;
     align-items: center;
-    background-color: rgb(63, 129, 184);
+    background-color: #3b5998;
+    font-family: 'Rajdhani', sans-serif;
+}
+
+h1 {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    font-size: 80px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    color: white;
 }
 
 section {
-    margin: 0;
+    padding: 30px 20px 20px 20px;
     display: grid;
     grid-template-columns: 140px 140px 140px;
-    grid-template-rows: 175px 220px 175px;
+    grid-template-rows: 20px 175px 220px 175px;
     justify-content: center;
     align-items: center;
     gap: 40px;
+    border: 12px solid  #f7f7f7;
+    border-radius: 10%;
+    background-color: #8b9dc3;
 }
 
 .player1CardsWon {
@@ -39,10 +53,9 @@ section {
 .deck {
     height: 100%;
     width: 100%;
-    border: 2px solid black;
-    border-radius: 5%;
-    background-color: red;
-    color: white;
+    border: 10px solid #3b5998;
+    border-radius: 10%;
+    background-color: #dfe3ee ;
     font-size: 60px;
 }
 
@@ -52,7 +65,7 @@ section {
     align-items: center;
     text-align: center;
     font-size: 40px;
-    color: white;
+    color: #49657b;
 }
 
 .player2Deck {
@@ -61,34 +74,38 @@ section {
     align-items: center;
     text-align: center;
     font-size: 40px;
-    color: white;
+    color: #49657b;
 }
 
 .cardHolder1 {
     height: 150px;
-    width: 140px;
+    width: 120px;
     border: 2px solid black;
-    border-radius: 5%;
+    border-radius: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 50px;
     margin-bottom: 50px;
+    margin-left: 30px;
     background-color: white;
+    font-family: serif;
 }
 
 
 .cardHolder2 {
     height: 150px;
-    width: 140px;
+    width: 120px;
     border: 2px solid black;
-    border-radius: 5%;
+    border-radius: 10%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
+    font-size: 50px;
     margin-top: 50px;
+    margin-left: 30px;
     background-color: white;
+    font-family: serif;
 }
 
 .red {
@@ -107,10 +124,20 @@ button {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: 20px;
-        font-size: 30px;
-        background-color:whitesmoke;
-        border: 5px groove red;
+        padding: 10px;
+        font-size: 35px;
+        background-color: #dfe3ee;
+        border: 5px solid #3b5998;
+        border-radius: 10%;
+        font-family: 'Rajdhani', sans-serif;
+        color: #49657b;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: #3b5998;
+    border-color: #dfe3ee;
+    color: #dfe3ee;
 }
 
 .text {
