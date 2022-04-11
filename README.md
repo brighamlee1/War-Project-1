@@ -30,11 +30,12 @@
 The technologies I used for this game are Javascript, CSS, and HTML.
 
 ## Getting Started 
-https://brighamlee1.github.io/War-Card-Game/
-This link will direct you to this game. To read more about the game before you start playing, press the game description button and read the description on how to play.
+- https://brighamlee1.github.io/War-Card-Game/
+- This link will direct you to this game. To read more about the game before you start playing, press the game description button and read the description on how to play.
 
-## Next Steps
+## Future Implementations
 - The next steps I would like to add to my game would be to implement a play again button.
 - I would like to add more animations to make the game more enjoyable and aesthetic.
 - I would like to make it look like the cards are actually being flipped over.
 - The last step I'd take is to make the game as if you had a deck of cards at home and were playing the game with a friend.
+
