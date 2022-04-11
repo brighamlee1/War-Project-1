@@ -63,7 +63,7 @@ function shuffle() {
 // split the deck between player1 and player 2
 function deckSplit() {
     const deckSplit = Math.ceil(deck.length / 2);
-    player1Deck = deck.slice(24, deckSplit);
+    player1Deck = deck.slice(0, deckSplit);
     player2Deck = deck.slice(deckSplit, deck.length);
     winner();
 }
