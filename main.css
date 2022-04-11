@@ -1,13 +1,40 @@
 body {
     margin: 0;
-    display: grid;
-    grid-template-columns: 150px 150px;
-    grid-template-rows: 250px 200px 50px 250px;
-    background-color: rgb(63, 129, 184);
+    display: flex;
+    height: 100vh;
     justify-content: center;
-    padding-top: 15px;
-    gap: 20px;
+    align-items: center;
+    background-color: rgb(63, 129, 184);
 }
+
+section {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 140px 140px 140px;
+    grid-template-rows: 175px 220px 175px;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.player1CardsWon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 50px;
+}
+
+.player2CardsWon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: black;
+    font-size: 50px;
+}
+
 
 .deck {
     height: 100%;
@@ -15,17 +42,52 @@ body {
     border: 2px solid black;
     border-radius: 5%;
     background-color: red;
+    color: white;
+    font-size: 60px;
 }
 
-.card {
-    height: 100%;
-    width: 100%;
+.player1Deck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.player2Deck {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 40px;
+    color: white;
+}
+
+.cardHolder1 {
+    height: 150px;
+    width: 140px;
     border: 2px solid black;
     border-radius: 5%;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 80px;
+    font-size: 60px;
+    margin-bottom: 50px;
+    background-color: white;
+}
+
+
+.cardHolder2 {
+    height: 150px;
+    width: 140px;
+    border: 2px solid black;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    margin-top: 50px;
     background-color: white;
 }
 
@@ -39,4 +101,23 @@ body {
 
 .hidden {
     display: none;
+}
+
+button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+        font-size: 30px;
+        background-color:whitesmoke;
+        border: 5px groove red;
+}
+
+.text {
+    display: flex;
+    font-size: 30px;
+    color: black;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
