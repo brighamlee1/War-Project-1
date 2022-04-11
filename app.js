@@ -62,8 +62,9 @@ function shuffle() {
 // split the deck between player1 and player 2
 function deckSplit() {
     const deckSplit = Math.ceil(deck.length / 2);
-    player1Deck = deck.slice(0, deckSplit);
-    player2Deck = deck.slice(deckSplit, 28);
+    player1Deck = deck.slice(24, deckSplit);
+    player2Deck = deck.slice(deckSplit, deck.length);
+    winner();
 }
 
 // declaring i outside the function to make it work
@@ -72,23 +73,49 @@ let i = -1;
 // flipping over the first card of each player
 function playerFlip() {
     if (i <= player1Deck.length && player2Deck.length) {
-        compareCards();
         cards1.classList.add('cardHolder1');
         cards1.innerText = `${player1Deck[0].rank} ${player1Deck[0].suit}`;
         cards2.innerText = `${player2Deck[0].rank} ${player2Deck[0].suit}`;
         cards2.classList.add('cardHolder2');
         player1CardsWon.innerText = `Cards: ${player1Deck.length}`;
         player2CardsWon.innerText = `Cards: ${player2Deck.length}`;
+        compareCards();
+        winner();
+    }
+}
+
+// changing color depending on the suit for player 1
+function color1Change() {
+    if (player1Deck[0].suit == '♣' || player1Deck[0].suit == '♠') {
+        cards1.classList.add('black');
+        cards1.classList.remove('red');
+    }
+    else if (player1Deck[0].suit == '♥' || player1Deck[0].suit == '♦') {
+        cards1.classList.add('red');
+        cards1.classList.remove('black');
+    }
+}
+
+// changing color depending on the suit for player 2
+function color2Change() {
+    if (player2Deck[0].suit == '♣' || player2Deck[0].suit == '♠') {
+        cards2.classList.add('black');
+        cards2.classList.remove('red');
+    }
+    else if (player2Deck[0].suit == '♥' || player2Deck[0].suit == '♦') {
+        cards2.classList.add('red');
+        cards2.classList.remove('black');
     }
 }
 
 // drawing cards and calling the function above
 draw.addEventListener('click', playerFlip);
 
-let cardArray = [];
 
 // comparing cards to see which one wins that round or to start a war
 function compareCards() {
+    color1Change();
+    color2Change();
     if (player1Deck[0].cardRank == player2Deck[0].cardRank) {
         winnerText.innerText = 'War!!!!!';
         warWinner();
@@ -180,11 +207,11 @@ function compareCards() {
 
 // checking for a winner
 function winner() {
-    if (player1Deck.length == 0) {
+    if (player1Deck.length < 1) {
         winnerText.innerText = 'Player 2 Wins the Game!! Game over!';
         player1CardsWon.innerText = `Cards: 0`;
         endGame();
-    } else if (player2Deck.length == 0) {
+    } else if (player2Deck.length < 1) {
         winnerText.innerText = 'Player 1 Wins the Game!! Game over!';
         player2CardsWon.innerText = `Cards: 0`;
         endGame();
@@ -206,10 +233,12 @@ function warWinner() {
 
 // gives ending game attributes that I'd like to give
 function endGame() {
-    alert("Game Over!");
     cards1.classList.remove('cardHolder1');
-    cards1.innerText = ``;
-    cards2.innerText = ``;
+    cards1.innerHTML = `Refresh the page and then press start to play again!!`;
+    cards1.classList.add('white');
+    cards1.classList.remove('red');
+    cards1.classList.remove('black');
+    cards2.innerHTML = ``;
     cards2.classList.remove('cardHolder2');
-    draw.removeEventListener('click', playerFlip);
+    alert("Game Over! Refresh the page and then press start to play again!");
 }
