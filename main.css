@@ -522,6 +522,8 @@ button:hover {
 
 .warText {
     margin: 0;
+    margin-right: 10px;
+    margin-left: 10px;
     font-size: 30px;
     color: #f7f7f7;
     text-align: center;
