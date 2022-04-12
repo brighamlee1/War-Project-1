@@ -20,11 +20,11 @@
 - I want to know who wins at the end and with how many cards left.
 
 ## War Game
-![Screen Shot 2022-04-11 at 2 55 00 PM](https://user-images.githubusercontent.com/91819733/162819101-7c75a70a-3df4-409f-beb8-1afb80ba85f6.png)
-
-![Screen Shot 2022-04-11 at 2 56 22 PM](https://user-images.githubusercontent.com/91819733/162819289-cfb6cd1a-6965-4256-b15d-42b95cad02cb.png)
-
-![Screen Shot 2022-04-11 at 2 57 06 PM](https://user-images.githubusercontent.com/91819733/162819410-3dd9cb8f-3189-424d-8669-6a2c4c522d58.png)
+![Screen Shot 2022-04-12 at 1 29 56 PM](https://user-images.githubusercontent.com/91819733/163030461-328cb130-bdcc-46dc-9cda-b24680644425.png)
+![Screen Shot 2022-04-12 at 1 30 09 PM](https://user-images.githubusercontent.com/91819733/163030480-1e273496-4589-462d-83dd-6244e471194d.png)
+![Screen Shot 2022-04-12 at 1 30 25 PM](https://user-images.githubusercontent.com/91819733/163030498-51c5ecb8-7df3-4163-ab4a-2f4df5edb5d7.png)
+![Screen Shot 2022-04-12 at 1 31 12 PM](https://user-images.githubusercontent.com/91819733/163030511-80d52c6d-ef79-44c5-98f6-cb6a298bf872.png)
+![Screen Shot 2022-04-12 at 1 32 07 PM](https://user-images.githubusercontent.com/91819733/163030517-8557f3fb-bbe6-45ac-8cd6-5be015a56af2.png)
 
 ### Technologies used
 The technologies I used for this game are Javascript, CSS, and HTML.
