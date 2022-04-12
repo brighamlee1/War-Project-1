@@ -41,6 +41,9 @@ function startGame() {
     shuffle();
     deckSplit();
     startTheGame.removeEventListener('click', startGame);
+
+    // creating the event listener for the play again function (calling it inside here so that it cant be used until the start button has been pressed)
+    play.addEventListener('click', playAgain);
     return;
 }
 
@@ -80,8 +83,8 @@ function playAgain() {
     return;
 }
 
-// creating the event listener for the play again function
-play.addEventListener('click', playAgain);
+
+
 
 // shuffle the deck
 function shuffle() {
