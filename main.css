@@ -35,7 +35,6 @@ section {
         align-items: center;
         gap: 30px;
         border: 12px solid  #f7f7f7;
-
         background-color: #8b9dc3;
     }
 }
@@ -48,6 +47,7 @@ h1 {
     font-size: 80px;
     font-family: 'Rajdhani', sans-serif;
     font-weight: 400;
+    text-decoration: underline;
     color: #f7f7f7;
 }
 
