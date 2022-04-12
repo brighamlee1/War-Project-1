@@ -34,8 +34,6 @@ The technologies I used for this game are Javascript, CSS, and HTML.
 - This link will direct you to this game. To read more about the game before you start playing, press the game description button and read the description on how to play.
 
 ## Future Implementations
-- The next steps I would like to add to my game would be to implement a play again button.
-- I would like to add more animations to make the game more enjoyable and aesthetic.
+- The next steps I would like to add to my game would be to implement adding animations to make the game more enjoyable and aesthetic.
 - I would like to make it look like the cards are actually being flipped over.
-- The last step I'd take is to make the game as if you had a deck of cards at home and were playing the game with a friend.
-
+- Adding these features would allow the game to look much more fluent and appear as a real game that could be put online.

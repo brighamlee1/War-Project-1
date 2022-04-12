@@ -21,10 +21,10 @@ section {
     align-items: center;
     gap: 40px;
     border: 12px solid  #f7f7f7;
-    border-radius: 10%;
     background-color: #8b9dc3;
 }
 
+/* adding responsive web design for laptops */
 @media screen and (max-width: 1300px) {
     section {
         padding: 30px 20px 20px 20px;
@@ -35,7 +35,7 @@ section {
         align-items: center;
         gap: 30px;
         border: 12px solid  #f7f7f7;
-        border-radius: 10%;
+
         background-color: #8b9dc3;
     }
 }
@@ -81,6 +81,7 @@ h1 {
     font-size: 40px;
 }
 
+/* adding responsive web design for laptops */
 @media screen and (max-width: 1300px) {
     .deck {
         height: 120px;
@@ -96,7 +97,7 @@ h1 {
         align-items: center;
         text-align: center;
         color: #f7f7f7;
-        font-size: 38px;
+        font-size: 40px;
     }
     .player2CardsWon {
         display: flex;
@@ -104,7 +105,7 @@ h1 {
         align-items: center;
         text-align: center;
         color: #f7f7f7;
-        font-size: 38px;
+        font-size: 40px;
     }
     h1 {
         display: flex;
@@ -148,6 +149,7 @@ h1 {
     color: black;
 }
 
+/* adding responsive web design for laptops */
 @media screen and (max-width: 1300px) {
     .cards2 {
         text-align: center;
@@ -198,6 +200,31 @@ h1 {
     font-family: serif;
 }
 
+.war-cards1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 120px;
+    border: 2px solid black;
+    font-size: 50px;
+    background-color: white;
+    font-family: serif;
+}
+
+.war-cards2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150px;
+    width: 120px;
+    border: 2px solid black;
+    font-size: 50px;
+    background-color: white;
+    font-family: serif;
+}
+
+/* adding responsive web design for laptops */
 @media screen and (max-width: 1300px) {
     .cardHolder1 {
         height: 110px;
@@ -222,6 +249,28 @@ h1 {
         font-size: 35px;
         margin-top: 40px;
         margin-left: 12px;
+        background-color: white;
+        font-family: serif;
+    }
+    .war-cards1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110px;
+        width: 80px;
+        border: 2px solid black;
+        font-size: 35px;
+        background-color: white;
+        font-family: serif;
+    }
+    .war-cards2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 110px;
+        width: 80px;
+        border: 2px solid black;
+        font-size: 35px;
         background-color: white;
         font-family: serif;
     }
@@ -264,6 +313,19 @@ h1 {
     color: #49657b;
 }
 
+.playAgain {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    font-size: 18px;
+    background-color: #dfe3ee;
+    border: 3px solid #3b5998;
+    font-family: 'Rajdhani', sans-serif;
+    color: #49657b;
+    font-weight: bold;
+}
+
 @media screen and (max-width: 1300px) {
     .start-game {
         display: flex;
@@ -289,6 +351,18 @@ h1 {
         font-family: 'Rajdhani', sans-serif;
         color: #49657b;
     }
+    .playAgain {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 2px;
+        font-size: 16px;
+        background-color: #dfe3ee;
+        border: 3px solid #3b5998;
+        font-family: 'Rajdhani', sans-serif;
+        color: #49657b;
+        font-weight: bold;
+    }
 }
 
 /* Setting a hover attribute for all buttons to add interactive ability */
@@ -309,6 +383,7 @@ button:hover {
     text-align: center;
 }
 
+/* adding responsive web design for laptops */
 @media screen and (max-width: 1300px) {
     .text {
         display: flex;
@@ -410,6 +485,7 @@ button:hover {
     font-weight: bold;
 }
 
+/* adding responsive web design for laptops */
 @media screen and (max-width: 1300px) {
     .description-button {
         display: flex;
@@ -426,3 +502,40 @@ button:hover {
 }
 
 /* End of modal styling */
+
+/* styling my war container that is hidden until a war is initiated */
+.warContainer {
+    border: 8px solid  #f7f7f7;
+    border-right: none;
+    background-color: #8b9dc3;
+    gap: 15px;
+    display: grid;
+    grid-template-columns: 160px;
+    grid-template-rows: 140px;
+    justify-content: center;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+.warText {
+    margin: 0;
+    font-size: 30px;
+    color: #f7f7f7;
+    text-align: center;
+}
+.war1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.war2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 15px
+}
