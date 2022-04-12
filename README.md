@@ -30,7 +30,7 @@
 The technologies I used for this game are Javascript, CSS, and HTML.
 
 ## Getting Started 
-- https://brighamlee1.github.io/War-Card-Game/
+- https://brighamlee1.github.io/War-Project-1/
 - This link will direct you to this game. To read more about the game before you start playing, press the game description button and read the description on how to play.
 
 ## Future Implementations
