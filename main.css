@@ -11,17 +11,6 @@ body {
     user-select: none;
 }
 
-/* Styling the 'War!!' text */
-h1 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 80px;
-    font-family: 'Rajdhani', sans-serif;
-    font-weight: 400;
-    color: #f7f7f7;
-}
-
 /* Setting grid layout for my game */
 section {
     padding: 30px 20px 20px 20px;
@@ -34,6 +23,32 @@ section {
     border: 12px solid  #f7f7f7;
     border-radius: 10%;
     background-color: #8b9dc3;
+}
+
+@media screen and (max-width: 1300px) {
+    section {
+        padding: 30px 20px 20px 20px;
+        display: grid;
+        grid-template-columns: 120px 120px 120px;
+        grid-template-rows: 20px 120px 165px 120px;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        border: 12px solid  #f7f7f7;
+        border-radius: 10%;
+        background-color: #8b9dc3;
+    }
+}
+
+/* Styling the 'War!!' text */
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 80px;
+    font-family: 'Rajdhani', sans-serif;
+    font-weight: 400;
+    color: #f7f7f7;
 }
 
 /* Card count */
@@ -63,7 +78,43 @@ section {
     border: 10px solid #3b5998;
     border-radius: 10%;
     background-color: #dfe3ee ;
-    font-size: 60px;
+    font-size: 40px;
+}
+
+@media screen and (max-width: 1300px) {
+    .deck {
+        height: 120px;
+        width: 95px;
+        border: 8px solid #3b5998;
+        border-radius: 10%;
+        background-color: #dfe3ee ;
+        font-size: 35px;
+    }
+    .player1CardsWon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #f7f7f7;
+        font-size: 38px;
+    }
+    .player2CardsWon {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: #f7f7f7;
+        font-size: 38px;
+    }
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 65px;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 400;
+        color: #f7f7f7;
+    }
 }
 
 .player1Deck {
@@ -71,7 +122,6 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 40px;
     color: #49657b;
 }
 
@@ -80,7 +130,6 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-size: 40px;
     color: #49657b;
 }
 /* End Player's decks */
@@ -97,6 +146,20 @@ section {
     font-size: 60px;
     font-weight: 700;
     color: black;
+}
+
+@media screen and (max-width: 1300px) {
+    .cards2 {
+        text-align: center;
+        font-size: 45px;
+        font-weight: 700;
+        color: black;
+    }
+    .cards1 {
+        text-align: center;
+        font-size: 25px;
+        color: black;
+    }
 }
 
 .blue {
@@ -133,6 +196,35 @@ section {
     margin-left: 10px;
     background-color: white;
     font-family: serif;
+}
+
+@media screen and (max-width: 1300px) {
+    .cardHolder1 {
+        height: 110px;
+        width: 80px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        margin-bottom: 40px;
+        margin-left: 12px;
+        background-color: white;
+        font-family: serif;
+    }
+    .cardHolder2 {
+        height: 110px;
+        width: 80px;
+        border: 2px solid black;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 35px;
+        margin-top: 40px;
+        margin-left: 12px;
+        background-color: white;
+        font-family: serif;
+    }
 }
 
 .red {
@@ -172,6 +264,33 @@ section {
     color: #49657b;
 }
 
+@media screen and (max-width: 1300px) {
+    .start-game {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+        font-size: 30px;
+        background-color: #dfe3ee;
+        border: 4px solid #3b5998;
+        border-radius: 10%;
+        font-family: 'Rajdhani', sans-serif;
+        color: #49657b;
+    }
+    .draw {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 6px;
+        font-size: 30px;
+        background-color: #dfe3ee;
+        border: 4px solid #3b5998;
+        border-radius: 10%;
+        font-family: 'Rajdhani', sans-serif;
+        color: #49657b;
+    }
+}
+
 /* Setting a hover attribute for all buttons to add interactive ability */
 button:hover {
     cursor: pointer;
@@ -188,6 +307,17 @@ button:hover {
     justify-content: center;
     align-items: center;
     text-align: center;
+}
+
+@media screen and (max-width: 1300px) {
+    .text {
+        display: flex;
+        font-size: 25px;
+        color: #f7f7f7;;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
 }
 
 /* Modal Styling */
@@ -278,6 +408,21 @@ button:hover {
     font-family: 'Rajdhani', sans-serif;
     color: #49657b;
     font-weight: bold;
+}
+
+@media screen and (max-width: 1300px) {
+    .description-button {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 4px;
+        font-size: 14px;
+        background-color: #dfe3ee;
+        border: 3px solid #3b5998;
+        font-family: 'Rajdhani', sans-serif;
+        color: #49657b;
+        font-weight: bold;
+    }
 }
 
 /* End of modal styling */
