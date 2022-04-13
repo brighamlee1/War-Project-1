@@ -4,7 +4,7 @@
 - War is a card game where a deck of 52 cards is split between two people
 - Both players will play a card and whichever is the highest rank wins
 - If both players play the same ranked card, a war begins
-- A war is where both players will place three cardsw face down and then flip one more card face up and whichever rank is higher wins.
+- A war is where both players will place three cards face down and then flip one more card face up and whichever rank is higher wins.
 - If their ranks were to be the same again, another war would begin.
 - The game ends when one player is completely out of cards.
 
