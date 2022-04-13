@@ -210,8 +210,24 @@ function compareCards() {
                 warText.innerText = 'Player 1 Wins the war!!';
                 color7change1();
                 color7change2();
-                player1Deck.push(player1Deck.splice(0, 8));
-                player1Deck.push(player2Deck.splice(0, 8));
+                player1Deck.push(player1Deck[0]);
+                player1Deck.push(player2Deck[0]);
+                player1Deck.push(player1Deck[1]);
+                player1Deck.push(player2Deck[1]);
+                player1Deck.push(player1Deck[2]);
+                player1Deck.push(player2Deck[2]);
+                player1Deck.push(player1Deck[3]);
+                player1Deck.push(player2Deck[3]);
+                player1Deck.push(player1Deck[4]);
+                player1Deck.push(player2Deck[4]);
+                player1Deck.push(player1Deck[5]);
+                player1Deck.push(player2Deck[5]);
+                player1Deck.push(player1Deck[6]);
+                player1Deck.push(player2Deck[6]);
+                player1Deck.push(player1Deck[7]);
+                player1Deck.push(player2Deck[7]);
+                player1Deck.splice(0, 8);
+                player2Deck.splice(0, 8);
             }
             else if (player2Deck[7].cardRank > player1Deck[7].cardRank) {
                 wars1.innerText = `${player1Deck[7].rank} ${player1Deck[7].suit}`;
@@ -222,8 +238,24 @@ function compareCards() {
                 warText.innerText = 'Player 2 Wins the war!!';
                 color7change1();
                 color7change2();
-                player2Deck.push(player1Deck.splice(0, 8));
-                player2Deck.push(player2Deck.splice(0, 8));
+                player2Deck.push(player1Deck[0]);
+                player2Deck.push(player2Deck[0]);
+                player2Deck.push(player1Deck[1]);
+                player2Deck.push(player2Deck[1]);
+                player2Deck.push(player1Deck[2]);
+                player2Deck.push(player2Deck[2]);
+                player2Deck.push(player1Deck[3]);
+                player2Deck.push(player2Deck[3]);
+                player2Deck.push(player1Deck[4]);
+                player2Deck.push(player2Deck[4]);
+                player2Deck.push(player1Deck[5]);
+                player2Deck.push(player2Deck[5]);
+                player2Deck.push(player1Deck[6]);
+                player2Deck.push(player2Deck[6]);
+                player2Deck.push(player1Deck[7]);
+                player2Deck.push(player2Deck[7]);
+                player1Deck.splice(0, 8);
+                player2Deck.splice(0, 8);
             }
             else if (player1Deck < 7) {
                 winnerText.innerText = 'Player 2 Wins the Game!!';
@@ -245,8 +277,16 @@ function compareCards() {
             warText.innerText = 'Player 1 Wins the war!!';
             color3change1();
             color3change2();
-            player1Deck.push(player1Deck.splice(0, 4));
-            player1Deck.push(player2Deck.splice(0, 4));
+            player1Deck.push(player1Deck[0]);
+            player1Deck.push(player2Deck[0]);
+            player1Deck.push(player1Deck[1]);
+            player1Deck.push(player2Deck[1]);
+            player1Deck.push(player1Deck[2]);
+            player1Deck.push(player2Deck[2]);
+            player1Deck.push(player1Deck[3]);
+            player1Deck.push(player2Deck[3]);
+            player1Deck.splice(0, 4);
+            player2Deck.splice(0, 4);
         }
         else if (player2Deck[3].cardRank > player1Deck[3].cardRank) {
             wars1.innerText = `${player1Deck[3].rank} ${player1Deck[3].suit}`;
@@ -257,20 +297,33 @@ function compareCards() {
             warText.innerText = 'Player 2 Wins the war!!';
             color3change1();
             color3change2();
-            player2Deck.push(player1Deck.splice(0, 4));
-            player2Deck.push(player2Deck.splice(0, 4));
+            player2Deck.push(player1Deck[0]);
+            player2Deck.push(player2Deck[0]);
+            player2Deck.push(player1Deck[1]);
+            player2Deck.push(player2Deck[1]);
+            player2Deck.push(player1Deck[2]);
+            player2Deck.push(player2Deck[2]);
+            player2Deck.push(player1Deck[3]);
+            player2Deck.push(player2Deck[3]);
+            player1Deck.splice(0, 4);
+            player2Deck.splice(0, 4);
         }
     }
     else if (player1Deck[0].cardRank > player2Deck[0].cardRank) {
         winner();
-        player1Deck.push(player1Deck.splice(0, 1));
-        player1Deck.push(player2Deck.splice(0, 1));
+        player1Deck.push(player1Deck[0]);
+        player1Deck.push(player2Deck[0]);
+        player1Deck.splice(0, 1);
+        player2Deck.splice(0, 1);
+
         winnerText.innerText = 'Player 1 wins!';
     }
     else if (player2Deck[0].cardRank > player1Deck[0].cardRank) {
         winner();
-        player2Deck.push(player1Deck.splice(0, 1));
-        player2Deck.push(player2Deck.splice(0, 1));
+        player2Deck.push(player1Deck[0]);
+        player2Deck.push(player2Deck[0]);
+        player1Deck.splice(0, 1);
+        player2Deck.splice(0, 1);
         winnerText.innerText = 'Player 2 wins!';
     }
     else return;
