@@ -63,8 +63,7 @@ function newDeck() {
 
 // creating play again button so the user can play again
 function playAgain() {
-    winnerText.style.fontSize = '';
-    winnerText.style.fontWeight = '';
+    winnerText.classList.remove('warStyles');
     warContainer.classList.add('hidden');
     player1CardsWon.innerText = 'Cards: 26';
     player2CardsWon.innerText = 'Cards: 26';
@@ -82,9 +81,6 @@ function playAgain() {
     deckSplit();
     return;
 }
-
-
-
 
 // shuffle the deck
 function shuffle() {
@@ -110,8 +106,7 @@ let i = 0;
 // flipping over the first card of each player
 function playerFlip() {
     if (i < player1Deck.length && player2Deck.length) {
-        winnerText.style.fontSize = '';
-        winnerText.style.fontWeight = '';
+        winnerText.classList.remove('warStyles');
         warContainer.classList.add('hidden');
         cards1.classList.add('cardHolder1');
         cards1.innerText = `${player1Deck[0].rank} ${player1Deck[0].suit}`;
@@ -203,8 +198,7 @@ function compareCards() {
     color2Change();
     if (player1Deck[0].cardRank == player2Deck[0].cardRank) {
         winnerText.innerText = 'War Initiated!';
-        winnerText.style.fontSize = '40px';
-        winnerText.style.fontWeight = '700';
+        winnerText.classList.add('warStyles');
         warWinner();
         if (player1Deck[3].cardRank == player2Deck[3].cardRank) {
             if (player1Deck[7].cardRank > player2Deck[7].cardRank) {
@@ -366,8 +360,7 @@ function warWinner() {
 
 // gives ending game attributes that I'd like to give
 function endGame() {
-    winnerText.style.fontSize = '';
-    winnerText.style.fontWeight = '';
+    winnerText.classList.remove('warStyles');
     warContainer.classList.add('hidden');
     cards1.classList.remove('cardHolder1');
     cards1.innerHTML = `Press play again to start a new game!`;

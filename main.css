@@ -1,5 +1,4 @@
 /* Setting the overall body style */
-
 body {
     margin: 0;
     display: flex;
@@ -443,7 +442,6 @@ button:hover {
     border: none;
     outline: none;
     background: none;
-    font-size: 30px;
     font-weight: bold;
     color: #3b5998;
 }
@@ -540,4 +538,178 @@ button:hover {
     align-items: center;
     text-align: center;
     margin-bottom: 15px
+}
+
+.warStyles {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+/* Responsive Design for smartphone devices */
+@media screen and (max-width: 800px) {
+    section {
+        padding: 30px 20px 20px 20px;
+        display: grid;
+        grid-template-columns: 60px 60px 60px;
+        grid-template-rows: 20px 80px 110px 80px;
+        justify-content: center;
+        align-items: center;
+        gap: 22px;
+        border: 10px solid  #f7f7f7;
+        background-color: #8b9dc3;
+    }
+    h1 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 40px;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 400;
+        text-decoration: underline;
+        color: #f7f7f7;
+    }
+    .cards1 {
+        text-align: center;
+        font-size: 14px;
+    }
+    .cards2 {
+        display: flex; 
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+    }
+    .deck {
+        height: 70px;
+        width: 55px;
+        border: 6px solid #3b5998;
+        border-radius: 8%;
+        background-color: #dfe3ee ;
+        font-size: 20px;
+    }
+    .player1CardsWon {
+        font-size: 24px;
+    }
+    .player2CardsWon {
+        font-size: 24px;
+    }
+    .cardHolder1 {
+        height: 70px;
+        width: 50px;
+        font-size: 22px;
+        margin-bottom: 40px;
+        margin-left: 7px;
+    }
+    .cardHolder2 {
+        height: 70px;
+        width: 50px;
+        font-size: 22px;
+        margin-left: 7px;
+    }
+    .war-cards1 {
+        height: 70px;
+        width: 50px;
+        font-size: 22px;
+    }
+    .war-cards2 {
+        height: 70px;
+        width: 50px;
+        font-size: 22px;
+    }
+    .start-game {
+        padding: 4px;
+        font-size: 18px;
+        background-color: #dfe3ee;
+        border: 3px solid #3b5998;
+        border-radius: 10%;
+    }
+    .draw {
+        padding: 4px;
+        font-size: 18px;
+        background-color: #dfe3ee;
+        border: 3px solid #3b5998;
+        border-radius: 10%;
+    }
+    .playAgain {
+        padding: 3px;
+        font-size: 12px;
+        background-color: #dfe3ee;
+        border: 2px solid #3b5998;
+        font-weight: 400;
+    }
+    .text {
+        font-size: 20px;
+    }
+    .warStyles {
+        font-size: 20px;
+        font-weight: 700;
+    }
+    .warContainer {
+        border: 6px solid #f7f7f7;
+        border-right: none;
+        background-color: #8b9dc3;
+        gap: 12px;
+        display: grid;
+        grid-template-columns: 60px;
+        grid-template-rows: 120px;
+        justify-content: center;
+        align-items: center;
+    }
+    .hidden {
+        display: none;
+    }
+    .warText {
+        margin: 0;
+        margin-right: 4px;
+        margin-left: 4px;
+        font-size: 16px;
+        color: #f7f7f7;
+        text-align: center;
+    }
+    .war1 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .war2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin-bottom: 15px
+    }
+    .header {
+        padding: 8px 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-bottom: 2px solid #3b5998;
+        background-color: #dfe3ee;
+    }
+    .header .title {
+        font-size: 22px;
+        font-weight: bold;
+        color: #464646;
+    }
+    .header .close-button {
+        cursor: pointer;
+        border: none;
+        outline: none;
+        background: none;
+        font-size: 22px;
+        font-weight: bold;
+        color: #464646;
+    }
+    .body {
+        padding: 8px 11px;
+        font-size: 18px;
+        background-color: #dfe3ee;
+    }
+    .description-button {
+        padding: 4px;
+        font-size: 11px;
+        font-weight: 400;
+    }
 }
